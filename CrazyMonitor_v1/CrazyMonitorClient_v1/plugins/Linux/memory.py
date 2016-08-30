@@ -4,6 +4,14 @@ import commands
 
 
 def monitor(first_invoke=1):
+    """
+    内存
+    :param first_invoke:
+    :return:
+        {'status': 0, 'MemTotal': '1907580', 'MemUsage': 413724, 'Cached': '533408', 'MemUsage_p': '21',
+        'SwapFree': '4194296', 'SwapUsage': 0, 'SwapTotal': '4194296', 'MemFree': '920192',
+        'SwapUsage_p': '0', 'Buffers': '40256'}
+    """
     monitor_dic = {
         'SwapUsage': 'percentage',
         'MemUsage': 'percentage',
@@ -24,7 +32,8 @@ def monitor(first_invoke=1):
         # real SwapUsage value
         value_dic['SwapUsage'] = int(value_dic['SwapTotal']) - int(value_dic['SwapFree'])
 
-        MemUsage = int(value_dic['MemTotal']) - (int(value_dic['MemFree']) + int(value_dic['Buffers']) + int(value_dic['Cached']))
+        MemUsage = int(value_dic['MemTotal']) - (int(value_dic['MemFree']) + int(value_dic['Buffers'])
+                                                 + int(value_dic['Cached']))
         if monitor_dic['MemUsage'] == 'percentage':
             value_dic['MemUsage_p'] = str(int(MemUsage) * 100 / int(value_dic['MemTotal']))
         # real MemUsage value

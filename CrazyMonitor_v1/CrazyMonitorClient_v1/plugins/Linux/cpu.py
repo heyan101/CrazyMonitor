@@ -5,12 +5,15 @@
 import commands
 import subprocess
 
+
 def monitor(frist_invoke=1):
     """
     获取 CPU 信息
     # yum -y install sysstat | apt-get install sysstat
     :param frist_invoke:
     :return:
+        {'status': 0, 'iowait': '0.00', 'system': '1.74', 'idle': '98.26',
+        'user': '0.00', 'steal': '0.00', 'nice': '0.00'}
     """
     shell_command_en = 'sar 1 3 | grep "^Average"'
     shell_command_zh = 'sar 1 3 | grep "^平均时间"'
@@ -38,4 +41,3 @@ def monitor(frist_invoke=1):
 if __name__ == "__main__":
     print(monitor())
 
-# {'status': 0, 'iowait': '0.00', 'system': '2.45', 'idle': '97.55', 'user': '0.00', 'steal': '0.00', 'nice': '0.00'}
