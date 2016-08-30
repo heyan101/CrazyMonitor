@@ -8,9 +8,6 @@ def monitor(first_invoke=1):
     内存
     :param first_invoke:
     :return:
-        {'status': 0, 'MemTotal': '1907580', 'MemUsage': 413724, 'Cached': '533408', 'MemUsage_p': '21',
-        'SwapFree': '4194296', 'SwapUsage': 0, 'SwapTotal': '4194296', 'MemFree': '920192',
-        'SwapUsage_p': '0', 'Buffers': '40256'}
     """
     monitor_dic = {
         'SwapUsage': 'percentage',

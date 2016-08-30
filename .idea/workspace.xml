@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6e8a0b22-e58d-424e-86c6-b19533fba945" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/__init__.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/conf/settings.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/conf/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/core/client.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/core/client.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/host_alive.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/host_alive.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/network.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/network.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/plugin_api.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/plugin_api.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/settings.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/urls.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CrazyMonitor_v1/monitor/views.py" afterPath="$PROJECT_DIR$/CrazyMonitor_v1/monitor/views.py" />
     </list>
     <ignored path="CrazyMonitor.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,70 +34,7 @@
     <favorites_list name="CrazyMonitor" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="memory.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sysinfo.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-              <folding>
-                <element signature="e#15#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cpu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="host_alive.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/host_alive.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="load.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/load.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -103,12 +50,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py" />
         <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/load.py" />
-        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py" />
         <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/host_alive.py" />
         <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/network.py" />
-        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/plugin_api.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/urls.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/monitor/serializer.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/monitor/api_urls.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/monitor/urls.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/conf/settings.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/core/client.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/monitor/backends/data_optimization.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/settings.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/monitor/backends/redis_conn.py" />
+        <option value="$PROJECT_DIR$/CrazyMonitor_v1/monitor/views.py" />
       </list>
     </option>
   </component>
@@ -119,8 +77,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="829" />
-    <option name="y" value="20" />
+    <option name="x" value="768" />
+    <option name="y" value="40" />
     <option name="width" value="1924" />
     <option name="height" value="1041" />
   </component>
@@ -150,7 +108,24 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrazyMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrazyMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CrazyMonitor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
@@ -162,6 +137,11 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\VM-Centos-Share\django\CrazyMonitor\CrazyMonitor_v1\CrazyMonitorClient_v1" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -370,6 +350,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="6e8a0b22-e58d-424e-86c6-b19533fba945" name="Default" comment="" />
@@ -381,10 +364,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="829" y="20" width="1924" height="1041" extended-state="0" />
-    <editor active="true" />
+    <frame x="768" y="40" width="1924" height="1041" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.10246781" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10300429" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -414,7 +397,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10246781" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10300429" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -450,45 +433,175 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py">
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="189">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/host_alive.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="20" />
+        <state relative-caret-position="168">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/network.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="168">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/cpu.py">
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/core/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="20" />
+        <state relative-caret-position="458">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/sysinfo.py">
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/monitor/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+        <state relative-caret-position="395">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
-            <element signature="e#15#24#0" expanded="true" />
+            <element signature="e#32#49#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/monitor/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="e#15#66#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/monitor/api_urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding>
+            <element signature="e#15#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/bin/CrazyClient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/plugin_api.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/plugins/Linux/memory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/conf/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2016.2/system/python_stubs/-1092047072/time.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitorClient_v1/core/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="78" column="23" selection-start-line="78" selection-start-column="23" selection-end-line="78" selection-end-column="23" />
+          <folding>
+            <element signature="e#15#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/CrazyMonitor_v1/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="584">
+          <caret line="145" column="14" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/monitor/backends/redis_conn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/monitor/backends/data_optimization.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CrazyMonitor_v1/monitor/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

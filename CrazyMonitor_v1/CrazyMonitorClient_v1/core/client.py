@@ -4,9 +4,10 @@ import threading
 import time
 import urllib
 import urllib2
+import json
 
 from conf import settings
-import json
+from plugins import plugin_api
 
 
 class ClientHandle(object):
@@ -31,7 +32,6 @@ class ClientHandle(object):
                 print("Loaded latest config:", self.monitored_services)
                 # 更新下次获取配置文件的时间
                 config_last_update_time = time.time()
-
             # start to monitor services
             for service_name, val in self.monitored_services['services'].items():
                 # 这里是为了给每个服务添加一个时间，以便于判断启动的时间间隔
@@ -49,7 +49,8 @@ class ClientHandle(object):
                 else:
                     print("Going to monitor [%s] in [%s] secs" % (service_name,
                           monitor_interval - (time.time() - last_invoke_time)))
-            time.sleep(1)
+            time.sleep(5)
+            print("TIME=", time.time())
 
     def invoke_plugin(self, service_name, val):
         """
@@ -62,6 +63,25 @@ class ClientHandle(object):
         plugin_name = val[0]
         if hasattr(plugin_api, plugin_name):
             func = getattr(plugin_api, plugin_name)
+            plugin_callback = func()  # 执行插件
+
+            report_data = {
+                'client_id': settings.configs['HostID'],
+                'service_name': service_name,
+                'data': json.dumps(plugin_callback)
+            }
+
+            request_action = settings.configs['urls']['server_report'][1]
+            request_url = settings.configs['urls']['server_report'][0]
+
+            # 不需要把整个report_data都dumps，我们在上面对 data单独做了 dumps操作
+            # report_data = json.dumps(report_data)
+            print('---report data:', report_data)
+            # 将数据上传给服务端
+            self.url_request(request_action, request_url, params=report_data)
+        else:
+            print("\033[31;1mCannot find plugin names [%s] in plugin_api\033[0m" % plugin_name)
+        print('--plugin:', val)
 
     def load_last_configs(self):
         """
@@ -76,21 +96,21 @@ class ClientHandle(object):
         self.monitored_services.update(latest_configs)
 
     def url_request(self, action, url, **extra_data):
-        '''
+        """
         cope with monitor server by url
         :param action: 'get' or 'post'
         :param url: witch url you want to request from the monitor server
         :param extra_data: extra parameters needed to be submited
         :return:
-        '''
-        abs_url = 'http://%s/%s/%s' % (settings.configs['Server'],
+        """
+        abs_url = 'http://%s:%s/%s' % (settings.configs['Server'],
                                        settings.configs['ServerPort'],
                                        url)
         if action in ('get', 'GET'):
             print(abs_url, extra_data)
             try:
                 req = urllib2.Request(abs_url)
-                req_data = urllib2.open(req, timeout=settings.configs['RequestTimeout'])
+                req_data = urllib2.urlopen(req, timeout=settings.configs['RequestTimeout'])
                 callback = req_data.read()
                 return callback
             except urllib2.URLError, e:

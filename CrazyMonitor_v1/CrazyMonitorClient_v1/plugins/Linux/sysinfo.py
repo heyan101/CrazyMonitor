@@ -8,39 +8,6 @@ def monitor():
     """
     系统信息收集
     :return:
-        {
-            'wake_up_type': 'Power Switch',
-            'uuid': '564D8023-B2CD-9078-98AB-CE8088FA564D',
-            'os_release': 'CentOS release 6.5 (Final)',
-            'os_type': 'linux',
-            'cpu_count': '1',
-            'ram': [{
-                'slot': 'RAM slot #0',
-                'capacity': '2048',
-                'manufactory': 'Not Specified',
-                'asset_tag': 'Not Specified',
-                'sn': 'Not Specified',
-                'model': 'DRAM'
-            }],
-            'cpu_model': 'Intel(R) Core(TM) i3-4170 CPU @ 3.70GHz',
-            'manufactory': 'VMware, Inc.',
-            'physical_disk_driver': [],
-            'sn': 'VMware-56 4d 80 23 b2 cd 90 78-98 ab ce 80 88 fa 56 4d',
-            'cpu_core_count': '',
-            'nic': [{
-                'macaddress': '00:0C:29:FA:56:4D',
-                'name': 'eth0',
-                'netmask': '255.255.255.0',
-                'bonding': 0,
-                'model': 'unknown',
-                'ipaddress': '192.168.1.120',
-                'network': '192.168.1.255'
-            }],
-            'model': 'VMware Virtual Platform',
-            'os_distribution': 'CentOS',
-            'asset_type': 'server',
-            'ram_size': 1862
-        }
     """
     filter_keys = ['Manufacturer', 'Serial Number', 'Product Name', 'UUID', 'Wake-up Type']
     raw_data = {}

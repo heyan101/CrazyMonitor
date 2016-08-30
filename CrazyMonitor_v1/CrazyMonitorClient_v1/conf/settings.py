@@ -2,8 +2,8 @@
 
 configs = {
     'HostID': 1,
-    'Server': '127.0.0.1',
-    'ServerPort': 8000,
+    'Server': '192.168.1.120',
+    'ServerPort': 8888,
     'urls': {
         'get_configs': ['api/client/config', 'get'],
         'server_report': ['api/client/service/report/', 'post'],

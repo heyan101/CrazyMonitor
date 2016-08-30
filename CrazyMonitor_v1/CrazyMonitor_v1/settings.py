@@ -140,6 +140,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
 )
 
+REDIS_CONN = {
+    'HOST': 'localhost',
+    'PORT': 6379,
+    'PASSWD': ''
+}
 
 
 TEMPLATE_DIRS = (
