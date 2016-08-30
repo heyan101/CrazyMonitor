@@ -34,6 +34,3 @@ def monitor(first_invoke=1):
 if __name__ == "__main__":
     print(monitor())
 
-"""
-
-"""

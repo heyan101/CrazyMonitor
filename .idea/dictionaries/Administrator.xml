@@ -1,7 +1,13 @@
 <component name="ProjectDictionaryState">
   <dictionary name="Administrator">
     <words>
+      <w>cpuinfo</w>
+      <w>dmidecode</w>
       <w>frist</w>
+      <w>manufactory</w>
+      <w>proc</w>
+      <w>raminfo</w>
+      <w>sudo</w>
       <w>sysstat</w>
     </words>
   </dictionary>
