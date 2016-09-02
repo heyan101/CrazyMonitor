@@ -40,7 +40,7 @@ class DataStore(object):
                 # redis 中的表名
                 data_series_key_in_redis = "StatusData_%s_%s_%s" % (self.client_id, self.service_name, key)
                 # 获取表中最后一条数据
-                last_point_from_redis = self.redis_conn_obj_lrange(data_series_key_in_redis, -1, -1)
+                last_point_from_redis = self.redis_conn.lrange(data_series_key_in_redis, -1, -1)
                 if not last_point_from_redis:
                     '''
                     表中没有数据，将插入一条空的数据，里面只保存一个当前时间，这个时间的作用是待会数据优化的时候，去判断上次
@@ -65,15 +65,15 @@ class DataStore(object):
                             if optimized_data:
                                 self.save_optimized_data(data_series_key_in_redis, optimized_data)
                 # 同时确保数据在redis中的存储数量不超过settings中指定 的值
-                if self.redis_conn_obj.llen(data_series_key_in_redis) >= data_series_val[1]:
-                    # self.redis_conn_obj.ltrim(data_series_key_in_redis,0,data_series_val[1])
-                    self.redis_conn_obj.lpop(data_series_key_in_redis)  # 删除最旧的一个数据
+                if self.redis_conn.llen(data_series_key_in_redis) >= data_series_val[1]:
+                    # self.redis_conn.ltrim(data_series_key_in_redis,0,data_series_val[1])
+                    self.redis_conn.lpop(data_series_key_in_redis)  # 删除最旧的一个数据
         else:
             print("report data is invalid::", self.data)
             raise ValueError
 
     def save_optimized_data(self, data_series_key_in_redis, optimized_data):
-        self.redis_conn_obj.rpush(data_series_key_in_redis, json.dumps([optimized_data, time.time()]))
+        self.redis_conn.rpush(data_series_key_in_redis, json.dumps([optimized_data, time.time()]))
 
     def get_data_slice(self, lastest_data_key, optimization_interval):
         """
@@ -82,7 +82,7 @@ class DataStore(object):
         :param optimization_interval: 要取出数据相对于当前时间的时间间隔，单位：秒
         :return: 数据表中最近 optimization_interval 秒的数据
         """
-        all_real_data = self.redis_conn_obj.lrange(lastest_data_key, 1, -1)
+        all_real_data = self.redis_conn.lrange(lastest_data_key, 1, -1)
         data_set = []
         for item in all_real_data:
             data = json.loads(item)

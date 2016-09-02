@@ -49,8 +49,7 @@ class ClientHandle(object):
                 else:
                     print("Going to monitor [%s] in [%s] secs" % (service_name,
                           monitor_interval - (time.time() - last_invoke_time)))
-            time.sleep(5)
-            print("TIME=", time.time())
+            time.sleep(1)
 
     def invoke_plugin(self, service_name, val):
         """
@@ -64,7 +63,6 @@ class ClientHandle(object):
         if hasattr(plugin_api, plugin_name):
             func = getattr(plugin_api, plugin_name)
             plugin_callback = func()  # 执行插件
-
             report_data = {
                 'client_id': settings.configs['HostID'],
                 'service_name': service_name,

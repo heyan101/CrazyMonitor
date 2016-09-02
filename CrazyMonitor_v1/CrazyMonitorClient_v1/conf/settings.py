@@ -2,7 +2,7 @@
 
 configs = {
     'HostID': 1,
-    'Server': '192.168.1.120',
+    'Server': '127.0.0.1',
     'ServerPort': 8888,
     'urls': {
         'get_configs': ['api/client/config', 'get'],

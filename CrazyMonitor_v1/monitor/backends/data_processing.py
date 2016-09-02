@@ -9,6 +9,7 @@ class DataHandler(object):
     """
     数据处理
     """
+
     def __init__(self, django_settings, connect_reids=True):
         self.django_settings = django_settings
         self.poll_interval = 0.5

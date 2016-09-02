@@ -32,6 +32,7 @@ class Host(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class HostGroup(models.Model):
     """
     主机群
@@ -42,6 +43,7 @@ class HostGroup(models.Model):
 
     def __unicode__(self):
         return self.name
+
 
 class Service(models.Model):
     """
@@ -58,8 +60,9 @@ class Service(models.Model):
 
     def __unicode__(self):
         return self.name
-    #def get_service_items(obj):
-    #    return ",".join([i.name for i in obj.items.all()])
+        # def get_service_items(obj):
+        #    return ",".join([i.name for i in obj.items.all()])
+
 
 class ServiceIndex(models.Model):
     """
@@ -78,16 +81,18 @@ class ServiceIndex(models.Model):
     def __unicode__(self):
         return "%s.%s" % (self.name, self.key)
 
+
 class Template(models.Model):
     """
     模板
     """
     name = models.CharField(u'模版名称', max_length=64, unique=True)
-    services = models.ManyToManyField('Service', verbose_name=u'服务列表')
+    services = models.ManyToManyField('Service', verbose_name=u'服务列表', blank=True)
     triggers = models.ManyToManyField('Trigger', verbose_name=u'触发器列表', blank=True)
 
     def __unicode__(self):
         return self.name
+
 
 class Trigger(models.Model):
     """
@@ -95,21 +100,22 @@ class Trigger(models.Model):
     触发器和触发器的触发条件做了一个反向关联，一般的思路应该是一个触发器有多个触发条件，但是如果这样的话，当有多个触发器共用一
     个触发器条件，修改触发器触发条件，会产生不确定性结果，所以我们采用反向关联，一个触发器条件对应一个触发器
     """
-    name = models.CharField(u'触发器名称',max_length=64)
+    name = models.CharField(u'触发器名称', max_length=64)
     severity_choices = (
-        (1,'Information'),
-        (2,'Warning'),
-        (3,'Average'),
-        (4,'High'),
-        (5,'Diaster'),
+        (1, 'Information'),
+        (2, 'Warning'),
+        (3, 'Average'),
+        (4, 'High'),
+        (5, 'Diaster'),
     )
-    #expressions = models.ManyToManyField(TriggerExpression,verbose_name=u"条件表达式")
+    # expressions = models.ManyToManyField(TriggerExpression,verbose_name=u"条件表达式")
     severity = models.IntegerField(u'告警级别', choices=severity_choices)
     enabled = models.BooleanField(default=True)
     memo = models.TextField(u"备注", blank=True, null=True)
 
     def __unicode__(self):
         return '<service:%s, severity:%s>' % (self.name, self.get_severity_display())
+
 
 class TriggerExpression(models.Model):
     """
@@ -134,18 +140,19 @@ class TriggerExpression(models.Model):
     logic_type = models.CharField(u"与一个条件的逻辑关系", choices=logic_type_choices, max_length=32, blank=True, null=True)
 
     def __unicode__(self):
-        return "%s %s(%s(%s))" %(self.service_index,self.operator_type,self.data_calc_func,self.data_calc_args)
+        return "%s %s(%s(%s))" % (self.service_index, self.operator_type, self.data_calc_func, self.data_calc_args)
 
     # 将一个普通类转为抽象类的方法，这里暂时没有使用
     class Meta:
         pass
-        #unique_together = ('trigger_id','service')
+        # unique_together = ('trigger_id','service')
+
 
 class Action(models.Model):
     """
     报警开关
     """
-    name = models.CharField(max_length=64,unique=True)
+    name = models.CharField(max_length=64, unique=True)
     host_groups = models.ManyToManyField('HostGroup', blank=True)
     hosts = models.ManyToManyField('Host', blank=True)
     triggers = models.ManyToManyField('Trigger', blank=True, help_text=u"想让哪些trigger触发当前报警动作")
@@ -161,6 +168,7 @@ class Action(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class ActionOperation(models.Model):
     """
     报警设置
@@ -173,7 +181,7 @@ class ActionOperation(models.Model):
         ('script', 'RunScript'),
     )
     action_type = models.CharField(u"动作类型", choices=action_type_choices, default='email', max_length=64)
-    notifiers= models.ManyToManyField('UserProfile', verbose_name=u"通知对象", blank=True)
+    notifiers = models.ManyToManyField('UserProfile', verbose_name=u"通知对象", blank=True)
     _msg_format = '''Host({hostname},{ip}) service({service_name}) has issue,msg:{msg}'''
 
     msg_format = models.TextField(u"消息格式", default=_msg_format)
@@ -196,6 +204,7 @@ class Maintenance(models.Model):
     def __unicode__(self):
         return self.name
 
+
 class UserProfile(models.Model):
     """
     用户信息
@@ -208,6 +217,8 @@ class UserProfile(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
 ''''
 CPU
     idle 80
