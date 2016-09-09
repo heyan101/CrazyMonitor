@@ -120,14 +120,13 @@
         var counter = 1;//用来判断是否要起新行
         $.each(graph_data, function (service_name, data) {
             var graph_container = "<div class='col-md-6' id='graph-" + service_name + "'>" + service_name + "</div>";
-
             if (counter % 2 == 1) { //要起新行
                 var row_ele = "<div row-counter='" + counter + "' class='row'></div>";
                 $("#host-graphs").append(row_ele);
 
-                $("#host-graphs div[row-counter='" + counter + "']").append(graph_container);
+                $("#host-graphs").find("div[row-counter='" + counter + "']").append(graph_container);
             } else {
-                $("#host-graphs div[row-counter='" + (counter - 1) + "']").append(graph_container);
+                $("#host-graphs").find("div[row-counter='" + (counter - 1) + "']").append(graph_container);
 
             }
             counter++;
@@ -198,14 +197,10 @@
                     valueDecimals: 2
                 },
                 // 要加载的数据
-                series: seriesOptions,
+                series: seriesOptions
             });
         };
         $.each(service_data, function (item_name, item_data) {
-{#            var data = [];#}
-{#            for(var i = 0; i < item_data.length; i++) {#}
-{#                data.push(item_data[i][0]);#}
-{#            }#}
             //$.getJSON('http://www.hcharts.cn/datas/jsonp.php?filename=' + name.toLowerCase() + '-c.json&callback=?',    function (data) {
             seriesOptions.push({
                 name: item_name,
@@ -218,7 +213,7 @@
     $(document).ready(function () {
         Highcharts.setOptions({
             global: {
-                useUTC: true,
+                useUTC: true
             }
         });
 
@@ -226,9 +221,9 @@
         LoadHostTriggers();
         // 默认加载最新的数据
         LoadHostGraphs('latest');
-{#        var refresh_triggers = setInterval(function () {#}
-{#            LoadHostTriggers();#}
-{#        }, 5000);#}
+        setInterval(function () {
+            LoadHostTriggers();
+        }, 5000);
     });//end doc ready
     </script>
 {% endblock %}
