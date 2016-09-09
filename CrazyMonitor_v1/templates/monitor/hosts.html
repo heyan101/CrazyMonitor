@@ -62,13 +62,11 @@
                                     <td data-type="status">{{ host.get_status_display }}</td>
                                     <td data-type="uptime">loading...</td>
                                     <td onmouseover="ShowTriggerDetail({{ host.id }}, 5)" data-type="5">
-
                                     </td>
                                     <td onmouseover="ShowTriggerDetail({{ host.id }}, 4)" data-type="4">2
                                         <a href="#" class="add-popover" data-original-title="Bootstrap Popover"
                                            data-content="content" data-placement="bottom" data-trigger="focus"
                                            data-toggle="popover">Dismissible popover</a>
-
                                     </td>
                                     <td onmouseover="ShowTriggerDetail({{ host.id }}, 3)" data-type="3"></td>
                                     <td onmouseover="ShowTriggerDetail({{ host.id }}, 2)" data-type="2"></td>
@@ -83,17 +81,12 @@
             </div>
             <!--===================================================-->
             <!--End network line chart-->
-
         </div>
-
     </div>
-
 {% endblock %}
 
 {% block bottom-js %}
     <script>
-
-
         TriggersData = {};//全局变量,用户在页面上看trigger详细时从这个变量里取数据
 
         $(document).ready(function () {

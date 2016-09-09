@@ -1,4 +1,6 @@
 # coding:utf8
+from django.core.serializers import json
+
 from monitor import models
 
 
@@ -39,6 +41,39 @@ class GraphGenerator2(object):
         for service_id, val_dic in service_data_dic.items():
             service_redis_key = "StatusData_%s_%s_%s" % (host_id, val_dic['name'], time_range)
             service_raw_data = self.redis_conn.lrange(service_redis_key, 0, -1)
+            """
+            service_raw_data 有两种格式:
+            1. service_raw_data = [
+                [{
+                    "status": 0,
+                    "nice": "0.00"
+                 },
+                    1472634303.045495
+                ],
+                [{
+                    "status": 0,
+                    "nice": "0.00"
+                 },
+                    1472634303.045876
+                ]
+            ]
+            2. service_raw_data = [
+                [
+                    {
+                        "status": 0,
+                        "data": {
+                            "lo": {
+                                "t_in": "2.61", "t_out": "2.61"
+                            },
+                            "eth0": {
+                                "t_in": "0.04", "t_out": "0.00"
+                            }
+                        }
+                    },
+                    1472626590.822217
+                ]
+            ]
+            """
             service_data_dic[service_id]['raw_data'] = service_raw_data
 
         return service_data_dic
@@ -77,7 +112,8 @@ class GraphGenerator(object):
             print("service data for graph:", data_dic)
             if self.sub_service_name == None or self.sub_service_name == 'undefined':
                 for data_point in data_set:
-                    # data_point sample data:('-->', {u'status': 0, u'iowait': u'0.00', u'system': u'1.01', u'idle': u'96.98', u'user': u'2.01', u'steal': u'0.00', u'nice': u'0.00'}, 1461840915.038072)
+                    # data_point sample data:('-->', {u'status': 0, u'iowait': u'0.00', u'system': u'1.01',
+                    # u'idle': u'96.98', u'user': u'2.01', u'steal': u'0.00', u'nice': u'0.00'}, 1461840915.038072)
                     val, timestamp = json.loads(data_point)
                     if val:
                         for k, v in val.items():
@@ -99,7 +135,8 @@ class GraphGenerator(object):
                 print(
                 "\033[44;1m------------subservice key: %s, %s\033[0m" % (self.sub_service_name, self.service_name))
                 for data_point in data_set:
-                    # data_point sample data:('-->', {u'status': 0, u'iowait': u'0.00', u'system': u'1.01', u'idle': u'96.98', u'user': u'2.01', u'steal': u'0.00', u'nice': u'0.00'}, 1461840915.038072)
+                    # data_point sample data:('-->', {u'status': 0, u'iowait': u'0.00', u'system': u'1.01',
+                    # u'idle': u'96.98', u'user': u'2.01', u'steal': u'0.00', u'nice': u'0.00'}, 1461840915.038072)
                     val, timestamp = json.loads(data_point)
                     if val:
                         if val.get('data'):

@@ -3,8 +3,10 @@
 from __future__ import unicode_literals
 
 from django.conf import settings
-from django.db import migrations, models
+from django.db import models
 import django.db.models.deletion
+
+from monitor import migrations
 
 
 class Migration(migrations.Migration):

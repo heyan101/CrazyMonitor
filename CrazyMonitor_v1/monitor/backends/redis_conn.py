@@ -3,7 +3,6 @@
 """
 Redis connection
 """
-
 import redis
 
 

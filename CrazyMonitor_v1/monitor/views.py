@@ -64,7 +64,6 @@ def graphs_gerator(request):
     :return:
     """
     graphs_generator = graphs.GraphGenerator2(REDIS_CONN)
-    print("GET================================================", request.GET)
     graphs_data = graphs_generator.get_host_graph(request.GET.get('host_id'), request.GET.get('time_range'))
 
     return HttpResponse(json.dumps(graphs_data))

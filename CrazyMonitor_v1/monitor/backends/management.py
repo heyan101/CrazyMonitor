@@ -6,6 +6,7 @@ import django
 
 from CrazyMonitor_v1 import settings
 from monitor.backends import data_processing
+from monitor.backends import trigger_handler
 
 django.setup()
 
