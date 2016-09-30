@@ -42,9 +42,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'CrazyMonitor_v1.urls'
+ROOT_URLCONF = 'ServiceMonitor.urls'
 
-WSGI_APPLICATION = 'CrazyMonitor_v1.wsgi.application'
+WSGI_APPLICATION = 'ServiceMonitor.wsgi.application'
 
 LOGGING = {
     'version': 1,
@@ -86,7 +86,7 @@ INSTALLED_APPS = (
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'CrazyMonitor_v1',                      # Or path to database file if using sqlite3.
+        'NAME': 'monitor',                      # Or path to database file if using sqlite3.
         'USER': 'root',                      # Not used with sqlite3.
         'PASSWORD': 'root',                  # Not used with sqlite3.
         'HOST': '127.0.0.1',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -97,29 +97,6 @@ DATABASES = {
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'django.contrib.auth.context_processors.auth',
-)
-
-STATUS_DATA_OPTIMIZATION = {
-    'latest': [0, 600],
-    '10mins': [600, 600],   # 4days
-    '30mins': [1800, 600],  # 14days
-    '60mins': [3600, 600],  # 25days
-}
-
-REDIS_CONN = {
-    'HOST': 'localhost',
-    'PORT': 6379,
-    'PASSWD': '',
-}
-
-# 报警通道，报警通知采用 Redis 的订阅发布功能
-TRIGGER_CHAN = 'trigger_event_channel'
-
-# 允许客户端汇报数据的时间最迟不能超过的秒数
-REPORT_LATE_TOLERANCE_TIME = 10
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
 )
 
 STATICFILES_DIRS = (
