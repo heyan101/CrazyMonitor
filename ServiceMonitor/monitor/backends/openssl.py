@@ -18,7 +18,6 @@ class Openssl(object):
         :param data:
         :return: 解密后的数据，报错返回 ''
         """
-        print('go to decryptData')
         file_path = os.path.dirname(os.path.abspath(__file__)) + '/' + self.file_name
         self.saveTempFile(file_path, data)
         status, result = self.execute(file_path)

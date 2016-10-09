@@ -26,5 +26,10 @@ pip install lxml-3.6.4-cp27-cp27m-win_amd64.whl
 下载 http://www.lfd.uci.edu/~gohlke/pythonlibs/#python_docx-0.8.6-py2.py3-none-any.whl
 pip install python_docx-0.8.6-py2.py3-none-any.whl
 
+# 安装画图库
+pip install numpy
+pip install -U pip setuptools
+pip install matplotlib
+
 
 
