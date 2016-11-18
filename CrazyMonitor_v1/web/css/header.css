@@ -1,0 +1,48 @@
+.header {
+	width: 1200px;
+	height: 61px;   
+	border: 1px solid #3079ed;
+    color: #fff;
+    text-shadow: 0 1px 0 #4d90fe;
+    background-color: #4b8cf7;
+}
+.hl .logo {
+	float: left;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+.main-l {
+	width: 200px;
+	height: 650px;
+	float: left;
+}
+.main-r {
+	width: 1000px;
+	height: 650px;
+	float:left;
+}
+.nav-menu {
+	height: 20px;
+    padding: 15px 15px 15px 0;
+    line-height: 20px;
+    cursor: pointer;
+	font-size: 20px;
+}
+/*
+.nav-menu i {
+	display: inline-block;
+}
+.nav-i {
+    float: left;
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+}
+.host-i {
+	background: url(../images/icon/host2.png) no-repeat 5px 5px;
+}
+*/
+.nav-menu span {
+	margin-left: 20px;
+	
+}

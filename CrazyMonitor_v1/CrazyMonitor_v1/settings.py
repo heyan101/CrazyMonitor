@@ -146,3 +146,6 @@ TEMPLATES = [
     },
 ]
 
+# 报错：You may need to add u'192.168.177.128' to ALLOWED_HOSTS
+ALLOWED_HOSTS = [u'192.168.177.128']
+
