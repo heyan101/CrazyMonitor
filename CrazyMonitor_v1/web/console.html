@@ -6,15 +6,12 @@
     
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <link type="text/css" rel="stylesheet" href="css/header.css">
+    <link type="text/css" rel="stylesheet" href="css/console.css">
 </head>
 <body>
 <!-- STA 头部 -->
 <div class="header">
-	<div class="hl clearfix">
-    	<div class="logo"><img name="logo"  src="images/logo.png"></div>
-    </div>
-    <div class="hr clearfix">
-    </div>
+    <div class="title"><h2>分布式监控系统</h2></div>
 </div>
 <!-- END 头部 -->
 
@@ -22,16 +19,21 @@
 <div class="content clearfix">
     <!-- STA 左侧菜单栏 -->
     <nav class="main-l">
-        <div class="nav-menu host clearfix">
-            <span>主机管理</span><i class="triangle-r"></i>
+        <div class="nav nav-item host clearfix">
+            <span>主机管理</span><i class="triangle-b"></i>
         </div>
-        <div class="nav-menu trigger clearfix">
+        <div class="nav-child">
+            <div class="nav-item first"><span>默认群组</span></div>
+            <div class="nav-item"><span>主机群组1</span></div>
+            <div class="nav-item"><span>主机群组2</span></div>
+        </div>
+        <div class="nav nav-item trigger clearfix">
             <span>触发器</span><i class="triangle-r"></i>
         </div>
-        <div class="nav-menu config clearfix">
+        <div class="nav nav-item config clearfix">
             <span>全局配置</span><i class="triangle-r"></i>
         </div>
-        <div class="nav-menu report clearfix">
+        <div class="nav nav-item report clearfix">
             <span>报表</span><i class="triangle-r"></i>
         </div>
     </nav>
@@ -39,7 +41,6 @@
     
     <!-- STA 右侧数据显示区 -->
     <div class="main-r">
-        
     </div>
     <!-- END 右侧数据显示区 -->
 </div>

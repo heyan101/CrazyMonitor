@@ -6,13 +6,21 @@
 	overflow: hidden;
 	zoom: 1;
 }
-div {
+div,ul,li {
 	display: block;
+}
+ul,li {
+    list-style: none;
 }
 body {
 	/* font-family: Microsoft Yahei; */
 	font-size: 14px;
+    height: 100%;
+	min-width: 1024px;
+}
+a {
+    text-decoration:none;
 }
 
-/* 颜色背景测试 */
+
 

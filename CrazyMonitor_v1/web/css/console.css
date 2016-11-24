@@ -1,0 +1,96 @@
+/* 侧边栏 */
+.main-l {
+	width: 200px;
+	height: 650px;
+	float: left;
+	border-right: 1px solid #999;
+}
+.nav {
+    border-top: 1px solid #999;
+}
+.nav-child .first {
+    border-top: 1px solid #999;
+}
+.nav-item {
+	height: 20px;
+    padding: 15px 15px 15px 0;
+    line-height: 20px;
+    cursor: pointer;
+	font-size: 16px;
+	
+}
+.nav-item span {
+	margin-left: 20px;
+	float: left;
+}
+.triangle-r { /* 向右三角形 */
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-left: 12px solid #999;
+    border-bottom: 6px solid transparent;
+	float: right;
+	margin-top: 5px;
+}
+.triangle-b { /* 向下三角形 */
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #999;
+    float: right;
+	margin-top: 5px;
+}
+/* 二级菜单 */
+.nav-child {
+    padding: 0 10px 10px 10px;
+}
+.nav-child .nav-item {
+    padding-left: 15px;
+}
+
+/* 右边主体部分 */
+.main-r {
+	height: 650px;
+	float:left;
+}
+.main-r .hosts .name {
+    margin: 20px 0px 20px 20px;
+}
+.tb-hosts {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	width:100%;
+	border-collapse:collapse;
+    margin-left: 20px;
+}
+.tb-hosts td,.tb-hosts th  {
+	font-size:16px;
+	border:1px solid #B2B2B2;
+	padding:3px 7px 2px 7px;
+}
+.tb-hosts th  {
+	text-align:left;
+	padding-top:5px;
+	padding-bottom:4px;
+	background-color:#CCCCCC;
+	color:#ffffff;
+}
+.tb-hosts td a {
+    line-height: 30px;
+}
+/* 颜色 */
+.tb-hosts .color-red {
+    background-color: #EF504A;
+}
+.tb-hosts .color-orange {
+    background-color: #F7B940;
+}
+.tb-hosts .color-yellow {
+    background-color: #FFFF01;
+}
+.tb-hosts .color-blue {
+    background-color: #107BEA;
+}
+.tb-hosts .color-gray {
+    background-color: #CCCCCC;
+}
