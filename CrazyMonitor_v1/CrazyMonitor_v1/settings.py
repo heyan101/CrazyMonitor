@@ -106,6 +106,7 @@ STATUS_DATA_OPTIMIZATION = {
     '60mins': [3600, 600],  # 25days
 }
 
+# redis
 REDIS_CONN = {
     'HOST': 'localhost',
     'PORT': 6379,
@@ -116,24 +117,24 @@ REDIS_CONN = {
 TRIGGER_CHAN = 'trigger_event_channel'
 
 # 允许客户端汇报数据的时间最迟不能超过的秒数
-REPORT_LATE_TOLERANCE_TIME = 10
+REPORT_LATE_TOLERANCE_TIME = 30
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
+    os.path.join(BASE_DIR, 'web').replace('\\', '/'),
 )
 
 STATICFILES_DIRS = (
-    "%s/%s" % (BASE_DIR, "statics"),
+    "%s/%s" % (BASE_DIR, "web"),
 )
 
-STATIC_ROOT = ''
+STATIC_ROOT = '/web/'
 
-STATIC_URL = '/static/'
+STATIC_URL = '/web/'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates/'],
+        'DIRS': ['web/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

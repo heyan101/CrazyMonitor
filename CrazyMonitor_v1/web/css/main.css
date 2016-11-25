@@ -2,10 +2,6 @@
 	margin: 0;
 	padding: 0;
 }
-.clearfix {
-	overflow: hidden;
-	zoom: 1;
-}
 div,ul,li {
 	display: block;
 }
@@ -20,6 +16,18 @@ body {
 }
 a {
     text-decoration:none;
+}
+
+/* 公用属性 */
+.clearfix {
+	overflow: hidden;
+	zoom: 1;
+}
+.hidden {
+    display: none;
+}
+.show {
+    display:block;
 }
 
 

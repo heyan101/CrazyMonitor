@@ -69,8 +69,8 @@ def graphs_gerator(request):
     return HttpResponse(json.dumps(graphs_data))
 
 
-def index(request):
-    return render(request, 'monitor/index.html')
+def console(request):
+    return render(request, 'console.html')
 
 
 def dashboard(request):
@@ -79,12 +79,6 @@ def dashboard(request):
 
 def triggers(request):
     return render(request, 'monitor/triggers.html')
-
-
-def hosts(request):
-    host_list = models.Host.objects.all()
-    print("hosts:", host_list)
-    return render(request, 'monitor/hosts.html', {'host_list': host_list})
 
 
 def host_detail(request, host_id):
