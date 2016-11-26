@@ -6,7 +6,7 @@ $(function(){
             $i.removeClass().addClass('triangle-b');
             /* 获取子菜单列表，第一项 */
             if ($(this).hasClass('host')) {
-                $.getJSON('/monitor/hosts/', function(data) {
+                $.getJSON('/monitor/api/getHostGroupList/', function(data) {
                     console.log(data);
                 });                
             } else if ($(this).hasClass('trigger')) {

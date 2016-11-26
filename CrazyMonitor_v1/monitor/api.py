@@ -14,13 +14,17 @@ from backends import data_optimization, redis_conn
 
 
 
-def hosts(request):
+def getHostGroupList(request):
     """
     获取主机群组
     """
-    host_list = models.Host.objects.all()
+    host_list = models.HostGroup.objects.all()
     if (host_list):
         data = list(host_list)
-        return HttpResponse(json.dumps(data))
+        return HttpResponse(json.dumps({
+            "rows": data,
+            "total": data.size(),
+            "stat": "OK"
+        }))
 
     return HttpResponse(json.dumps({"stat": "OK"}))

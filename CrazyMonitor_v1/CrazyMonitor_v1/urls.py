@@ -8,7 +8,7 @@ admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/', include('monitor.api_urls')),
-    url(r'^monitor/', include('monitor.urls')),
+    #url(r'^monitor/api/', include('monitor.api_urls')),
+    url(r'^monitor/api/', include('monitor.urls')),
 ]
 
