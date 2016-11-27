@@ -1,0 +1,17 @@
+# virtualenv  安装文档
+
+1. 系统本身的环境是python2.6.6，安装一个pip
+
+2. 用 pip 安装 virtualenv
+$ pip install virtualenv
+
+3. 安装 virtualenv 里面指定要运行的 python版本，这里安装 python2.7.11
+
+4. 创建虚拟环境,记得指定要运行的python版本
+$ virtualenv --no-site-packages --always-copy  --python=/usr/local/python2.7/bin/python2.7 vmName
+
+4. 进入该虚拟环境
+$ source vmName/bin/activate
+
+5. 退出当前环境
+$ deactivate
