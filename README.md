@@ -21,24 +21,23 @@
 ####################################################################################################
 # 项目依赖
 
-# 运行时环境
-python2.6.6
+该项目是在 virtualenv 工具里面运行的，因为很多项目的python版本可能不一样，在沙箱里面运行
+不会影响到其他项目。
+a. 使用 pip 安装
+$ pip install virtualenv
 
-# pip 是 python 安装模块的一个管理工具
-pip
+# 运行时环境
+python2.7
 
 # django以及用到的 python 模块
 Django1.8.6(长期文档维护版)
-
 MySQLdb1.2.3
-// 安装 MySQLdb 报错，提示gcc错误
-yum -y install gcc*
-
 redis
 
 # 数据库
 mysql
 redis
+$ yum -y install redis
 
 # 安装问题总结
 1. 安装MySQLdb
